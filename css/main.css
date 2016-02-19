@@ -17,3 +17,21 @@ form {
   top: 50px;
   right: 92px;
 }
+
+.hidden {
+  display: none;
+}
+
+.information img {
+  display: block;
+  margin: 20px auto;
+}
+
+.search-results {
+  display: block;
+  margin: 0 auto;
+}
+
+dd {
+  margin: 0;
+}
