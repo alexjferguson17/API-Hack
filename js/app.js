@@ -19,14 +19,14 @@ $(document).ready(function(){
        success: function(response) {
           console.log(response);
 
-         $.each(response.Similar.Results, function(index, value){
-          //  $('#search-results').append(value.Name);
-          //  var url = 'https://i.ytimg.com/vi/' + value.yID + '/mqdefault.jpg'
-          //  var img = $('<img src="' + url + '">');
-          //  $('#search-results').append(img);
-          var information = showInspiration(value)
-          $('.search-results').append(information);
-         });
+          $.each(response.Similar.Results, function(index, value){
+            //  $('#search-results').append(value.Name);
+            //  var url = 'https://i.ytimg.com/vi/' + value.yID + '/mqdefault.jpg'
+            //  var img = $('<img src="' + url + '">');
+            //  $('#search-results').append(img);
+            var information = showInspiration(value)
+            $('.search-results').append(information);
+          });
       }
     }); // ajax finishes
 
@@ -35,8 +35,8 @@ $(document).ready(function(){
   var showInspiration = function(value) {
     var url = 'https://i.ytimg.com/vi/' + value.yID + '/mqdefault.jpg';
     var result = $('.templates .information').clone();
-    var img = $('<img src="' + url + '">');
-    $('.typeImg').append(img);
+    var img = '<img src="' + url + '">';
+    result.find('.typeImg').append(img);
     result.find('.name').text(value.Name);
     result.find('.catergory').text(value.Type);
     result.find('.preview').text(value.wTeaser);

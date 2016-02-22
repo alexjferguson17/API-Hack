@@ -7,17 +7,6 @@ form {
   text-align: center;
 }
 
-#search-results {
-  margin: 0 auto;
-  display: block;
-}
-
-#button {
-  position: relative;
-  top: 50px;
-  right: 92px;
-}
-
 .hidden {
   display: none;
 }
@@ -29,8 +18,13 @@ form {
 
 .search-results {
   display: block;
-  margin: 0 auto;
-  width: 900px;
+  width: 100%;
+}
+
+.container-img,
+.container-info {
+  display: inline-block;
+  width: 49%;
 }
 
 dd, dt {
